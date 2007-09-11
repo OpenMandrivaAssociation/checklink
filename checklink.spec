@@ -3,34 +3,34 @@
 %define realname W3C-LinkChecker
 
 %define version 4.2.1
-%define release %mkrel 2
+%define release %mkrel 3
 
-Summary: A tools to check link on website
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://www.cpan.org/authors/id/S/SC/SCOP/W3C-LinkChecker-%{version}.tar.bz2
-License: W3C License
-Group: Networking/WWW
-Url: http://validator.w3.org/docs/checklink.html
-BuildRoot: %{_tmppath}/%{name}-buildroot
-BuildArch: noarch
-Provides: W3C-LinkChecker = %version-%release
+Summary:	A tools to check link on website
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	http://www.cpan.org/authors/id/S/SC/SCOP/W3C-LinkChecker-%{version}.tar.bz2
+License:	W3C License
+Group:		Networking/WWW
+Url:		http://validator.w3.org/docs/checklink.html
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildArch:	noarch
+Provides:	W3C-LinkChecker = %version-%release
 # To follow perl module policy naming:
-Provides: perl-W3C-LinkChecker = %version-%release
-BuildRequires: perl(CGI)
-BuildRequires: perl(HTML::Entities)
-BuildRequires: perl(HTML::Parser) >= 3.00
-BuildRequires: perl(HTTP::Request)
-BuildRequires: perl(HTTP::Response)
-BuildRequires: perl(LWP::RobotUA)
-BuildRequires: perl(Net::IP)
-BuildRequires: perl(Net::hostent)
-BuildRequires: perl(Socket)
-BuildRequires: perl(Time::HiRes)
-BuildRequires: perl(URI)
-BuildRequires: perl(URI::Escape)
-BuildRequires: perl(URI::file)
+Provides:	perl-W3C-LinkChecker = %version-%release
+BuildRequires:	perl(CGI)
+BuildRequires:	perl(HTML::Entities)
+BuildRequires:	perl(HTML::Parser) >= 3.00
+BuildRequires:	perl(HTTP::Request)
+BuildRequires:	perl(HTTP::Response)
+BuildRequires:	perl(LWP::RobotUA)
+BuildRequires:	perl(Net::IP)
+BuildRequires:	perl(Net::hostent)
+BuildRequires:	perl(Socket)
+BuildRequires:	perl(Time::HiRes)
+BuildRequires:	perl(URI)
+BuildRequires:	perl(URI::Escape)
+BuildRequires:	perl(URI::file)
 
 %description
 The link checker reads an HTML or XHTML document and extracts a list of anchors
