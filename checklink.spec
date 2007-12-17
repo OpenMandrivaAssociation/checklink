@@ -13,7 +13,6 @@ Source0:	http://www.cpan.org/authors/id/S/SC/SCOP/W3C-LinkChecker-%{version}.tar
 License:	W3C License
 Group:		Networking/WWW
 Url:		http://validator.w3.org/docs/checklink.html
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 Provides:	W3C-LinkChecker = %version-%release
 # To follow perl module policy naming:
