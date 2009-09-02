@@ -3,7 +3,7 @@
 %define realname W3C-LinkChecker
 
 %define version 4.2.1
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	A tools to check link on website
 Name:		%{name}
