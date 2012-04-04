@@ -2,20 +2,25 @@
 
 %define realname W3C-LinkChecker
 
-%define version 4.2.1
-%define release %mkrel 7
+%define version 4.81
+%define rel 1
+
+%if %{mdvver} < 201100
+%define release %mkrel %{rel}
+%else
+%define release %{rel}
+%endif
 
 Summary:	A tools to check link on website
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	http://www.cpan.org/authors/id/S/SC/SCOP/W3C-LinkChecker-%{version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/S/SC/SCOP/%{realname}-%{version}.tar.gz
 License:	W3C License
 Group:		Networking/WWW
-Url:		http://validator.w3.org/docs/checklink.html
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+Url:		http://search.cpan.org/dist/W3C-LinkChecker/
 BuildArch:	noarch
-Provides:	W3C-LinkChecker = %version-%release
+Provides:	%{realname} = %version-%release
 # To follow perl module policy naming:
 Provides:	perl-W3C-LinkChecker = %version-%release
 BuildRequires:	perl(CGI)
@@ -31,6 +36,8 @@ BuildRequires:	perl(Time::HiRes)
 BuildRequires:	perl(URI)
 BuildRequires:	perl(URI::Escape)
 BuildRequires:	perl(URI::file)
+BuildRequires:	perl(WWW::RobotRules)
+BuildRequires:	perl(CSS::DOM)
 
 %description
 The link checker reads an HTML or XHTML document and extracts a list of anchors
@@ -58,23 +65,17 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
-
 %makeinstall_std
 
 mkdir -p %buildroot%_var/www/cgi-bin/
 
 cp %buildroot%_bindir/%name %buildroot%_var/www/cgi-bin/%{name}.cgi
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
 %defattr(-,root,root)
 %_bindir/%name
+%{perl_vendorlib}/W3C/LinkChecker.pm
 %_var/www/cgi-bin/%{name}.cgi
 %_mandir/man*/%{name}*
 %doc docs/*
-%doc README ChangeLog
-
-
+%doc README NEWS
