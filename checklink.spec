@@ -38,6 +38,8 @@ BuildRequires:	perl(URI::Escape)
 BuildRequires:	perl(URI::file)
 BuildRequires:	perl(WWW::RobotRules)
 BuildRequires:	perl(CSS::DOM)
+BuildRequires:	perl(Config::General)
+BuildRequires:	perl(Term::ReadKey)
 
 %description
 The link checker reads an HTML or XHTML document and extracts a list of anchors
