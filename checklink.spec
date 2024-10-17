@@ -18,7 +18,7 @@ Release:	%{release}
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SC/SCOP/%{realname}-%{version}.tar.gz
 License:	W3C License
 Group:		Networking/WWW
-Url:		http://search.cpan.org/dist/W3C-LinkChecker/
+Url:		https://search.cpan.org/dist/W3C-LinkChecker/
 BuildArch:	noarch
 Provides:	%{realname} = %version-%release
 # To follow perl module policy naming:
