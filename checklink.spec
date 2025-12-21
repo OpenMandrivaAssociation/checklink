@@ -23,6 +23,7 @@ BuildArch:	noarch
 Provides:	%{realname} = %version-%release
 # To follow perl module policy naming:
 Provides:	perl-W3C-LinkChecker = %version-%release
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(CGI)
 BuildRequires:	perl(HTML::Entities)
