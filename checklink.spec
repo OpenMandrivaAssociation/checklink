@@ -6,9 +6,9 @@
 %define rel 1
 
 %if %{mdvver} < 201100
-%define release %mkrel %{rel}
+%define release %{rel}.1
 %else
-%define release %{rel}
+%define release %{rel}.1
 %endif
 
 Summary:	A tools to check link on website
